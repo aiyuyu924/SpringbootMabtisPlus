@@ -72,7 +72,11 @@ public class MyController {
         return Result.ok(userLoginServiceImpl.Delete());
     }
 
-
+    @RequestMapping(value = "/deleteId",method = RequestMethod.GET)
+    @ResponseBody
+    public Result deleteId(String id){
+        return Result.ok(userLoginServiceImpl.deleteId(id));
+    }
 
 
 }

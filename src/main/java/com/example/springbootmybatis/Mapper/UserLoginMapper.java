@@ -28,4 +28,9 @@ public interface UserLoginMapper {
 
      //删除所有数据
     UserLogin Delete();
+
+    //根据id删除
+    UserLogin deleteId(String id);
+
+
 }

@@ -30,6 +30,13 @@ public class UserLoginServiceImpl implements UserLoginService{
     }
 
     @Override
+    public boolean deleteId(String id) {
+        userLoginMapper.deleteId(id);
+        return false;
+    }
+
+
+    @Override
     public UserLogin queryId(String id) {
         return userLoginMapper.queryId(id);
     }

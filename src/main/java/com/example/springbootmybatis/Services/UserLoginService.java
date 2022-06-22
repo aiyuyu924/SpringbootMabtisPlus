@@ -28,4 +28,6 @@ public interface UserLoginService {
      //删除全部
     UserLogin Delete();
     //根据id删除
+
+    boolean deleteId(String id);
 }

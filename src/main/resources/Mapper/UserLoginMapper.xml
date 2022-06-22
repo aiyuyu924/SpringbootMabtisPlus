@@ -27,8 +27,12 @@
         select * from user where email = #{email}
     </select>
 
-    <select id="Delete" resultType="com.example.springbootmybatis.Pojo.UserLogin">
+    <delete id="Delete" parameterType="com.example.springbootmybatis.Pojo.UserLogin">
         delete from user
-    </select>
+    </delete>
+
+    <delete id="deleteId" parameterType="com.example.springbootmybatis.Pojo.UserLogin">
+        delete from user where id = #{id}
+    </delete>
 
 </mapper>
