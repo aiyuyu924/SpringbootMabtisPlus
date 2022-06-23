@@ -75,8 +75,24 @@ public class MyController {
     @RequestMapping(value = "/deleteId",method = RequestMethod.GET)
     @ResponseBody
     public Result deleteId(String id){
+        UserLogin userLogin =  userLoginServiceImpl.queryId(id);
+        if (userLogin==null){
+           return Result.fail();
+        }
         return Result.ok(userLoginServiceImpl.deleteId(id));
     }
+
+    @RequestMapping(value = "/Update",method = RequestMethod.POST)
+    @ResponseBody
+    public Result Update(String id){
+        UserLogin userLogin =  userLoginServiceImpl.queryId(id);
+        if (userLogin==null){
+            return Result.fail();
+        }
+        return Result.ok(userLoginServiceImpl.UpdateId(id));
+    }
+
+
 
 
 }

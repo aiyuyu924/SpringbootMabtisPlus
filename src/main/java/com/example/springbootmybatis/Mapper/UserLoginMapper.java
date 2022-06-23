@@ -30,7 +30,9 @@ public interface UserLoginMapper {
     UserLogin Delete();
 
     //根据id删除
-    UserLogin deleteId(String id);
+    int deleteId(String id);
 
+    //根据id修改
+    int UpdateId(String id);
 
 }
