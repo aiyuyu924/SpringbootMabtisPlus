@@ -1,4 +1,4 @@
-package com.example.springbootmybatis.Utils;
+package com.example.SpringBootMybatis.Utils;
 
 import lombok.Getter;
 

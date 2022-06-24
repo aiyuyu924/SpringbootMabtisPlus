@@ -1,7 +1,7 @@
-package com.example.springbootmybatis.Services;
+package com.example.SpringBootMybatis.Services;
 
-import com.example.springbootmybatis.Mapper.UserLoginMapper;
-import com.example.springbootmybatis.Pojo.UserLogin;
+import com.example.SpringBootMybatis.Mapper.UserLoginMapper;
+import com.example.SpringBootMybatis.Pojo.UserLogin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -35,8 +35,8 @@ public class UserLoginServiceImpl implements UserLoginService{
     }
 
     @Override
-    public int UpdateId(String id) {
-        return userLoginMapper.UpdateId(id);
+    public int updateId(UserLogin userLogin) {
+        return userLoginMapper.updateId(userLogin);
     }
 
 

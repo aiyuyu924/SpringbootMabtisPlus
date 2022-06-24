@@ -1,6 +1,6 @@
-package com.example.springbootmybatis.Services;
+package com.example.SpringBootMybatis.Services;
 
-import com.example.springbootmybatis.Pojo.UserLogin;
+import com.example.SpringBootMybatis.Pojo.UserLogin;
 
 import java.util.List;
 
@@ -31,6 +31,6 @@ public interface UserLoginService {
     //boolean deleteId(String id);
     int deleteId(String id);
 
-    //根据id修改
-    int UpdateId(String id);
+    //修改数据
+    int updateId(UserLogin userLogin);
 }

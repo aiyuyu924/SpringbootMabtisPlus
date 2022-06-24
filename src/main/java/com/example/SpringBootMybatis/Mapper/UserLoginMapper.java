@@ -1,7 +1,7 @@
-package com.example.springbootmybatis.Mapper;
+package com.example.SpringBootMybatis.Mapper;
 
 
-import com.example.springbootmybatis.Pojo.UserLogin;
+import com.example.SpringBootMybatis.Pojo.UserLogin;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -32,7 +32,7 @@ public interface UserLoginMapper {
     //根据id删除
     int deleteId(String id);
 
-    //根据id修改
-    int UpdateId(String id);
+    //修改
+    int updateId(UserLogin userLogin);
 
 }

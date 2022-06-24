@@ -1,9 +1,9 @@
-package com.example.springbootmybatis.Controller;
+package com.example.SpringBootMybatis.Controller;
 
 
-import com.example.springbootmybatis.Pojo.UserLogin;
-import com.example.springbootmybatis.Services.UserLoginServiceImpl;
-import com.example.springbootmybatis.Utils.Result;
+import com.example.SpringBootMybatis.Pojo.UserLogin;
+import com.example.SpringBootMybatis.Services.UserLoginServiceImpl;
+import com.example.SpringBootMybatis.Utils.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -82,14 +82,14 @@ public class MyController {
         return Result.ok(userLoginServiceImpl.deleteId(id));
     }
 
-    @RequestMapping(value = "/Update",method = RequestMethod.POST)
+    @RequestMapping(value = "/update",method = RequestMethod.POST)
     @ResponseBody
-    public Result Update(String id){
-        UserLogin userLogin =  userLoginServiceImpl.queryId(id);
-        if (userLogin==null){
-            return Result.fail();
-        }
-        return Result.ok(userLoginServiceImpl.UpdateId(id));
+    public Result Update(UserLogin userLogin){
+//        UserLogin userLogin =  userLoginServiceImpl.queryId(id);
+//        if (userLogin==null){
+//            return Result.fail();
+//        }
+        return Result.ok(userLoginServiceImpl.updateId(userLogin));
     }
 
 

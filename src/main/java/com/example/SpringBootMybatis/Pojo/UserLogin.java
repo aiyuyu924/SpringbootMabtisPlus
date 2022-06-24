@@ -1,4 +1,4 @@
-package com.example.springbootmybatis.Pojo;
+package com.example.SpringBootMybatis.Pojo;
 
 
 import lombok.AllArgsConstructor;
