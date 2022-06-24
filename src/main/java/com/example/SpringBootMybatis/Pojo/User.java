@@ -8,7 +8,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserLogin {
+
+// TODO: 2022/6/25  
+//必须和数据库名称保持一致
+public class User {
     private String id;
     private String name;
     private String age;
