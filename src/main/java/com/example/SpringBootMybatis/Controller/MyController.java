@@ -62,7 +62,7 @@ public class MyController {
 
     @RequestMapping(value = "/add",method = RequestMethod.POST)
     @ResponseBody
-    public Result  add(UserLogin userLogin){
+    public Result  add(UserLogin userLogin ,String id){
         return Result.ok(userLoginServiceImpl.add(userLogin));
     }
 
@@ -85,10 +85,6 @@ public class MyController {
     @RequestMapping(value = "/update",method = RequestMethod.POST)
     @ResponseBody
     public Result Update(UserLogin userLogin){
-//        UserLogin userLogin =  userLoginServiceImpl.queryId(id);
-//        if (userLogin==null){
-//            return Result.fail();
-//        }
         return Result.ok(userLoginServiceImpl.updateId(userLogin));
     }
 
