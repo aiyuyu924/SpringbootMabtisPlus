@@ -1,5 +1,6 @@
-package com.example.Config;
+package com.example.SpringBootMybatis.Configs;
 
+import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
@@ -14,7 +15,7 @@ public class MybatisPlus {
     public MybatisPlusInterceptor mybatisPlusInterceptor(){
         //分页插件
         MybatisPlusInterceptor mybatisPlusInterceptor=new MybatisPlusInterceptor();
-        mybatisPlusInterceptor.addInnerInterceptor(new PaginationInnerInterceptor());
+        mybatisPlusInterceptor.addInnerInterceptor(new PaginationInnerInterceptor(DbType.MYSQL));
         return mybatisPlusInterceptor;
     }
 }

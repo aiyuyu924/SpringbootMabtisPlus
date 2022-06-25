@@ -26,8 +26,7 @@ public class MyController {
 
     @GetMapping("/findPage")
     public List<User> findPage(@RequestParam("page") Integer page,
-                               @RequestParam("pageSize")Integer pageSize
-                                    ){
+                               @RequestParam("pageSize")Integer pageSize){
         return userService.findPage(page,pageSize);
     }
 

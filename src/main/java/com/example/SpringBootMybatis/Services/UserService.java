@@ -25,6 +25,8 @@ public class UserService {
     public  List<User> findPage(int current, int pageSize){
         Page<User> page =  new Page<>(current,pageSize);
         Page<User> userLoginPage = userLoginMapper.selectPage(page,new LambdaQueryWrapper<>());
+
+        System.out.println(userLoginPage);
         log.info("totle:{}",userLoginPage.getTotal());
         log.info("pages:{}",userLoginPage.getPages());
         return userLoginPage.getRecords();
